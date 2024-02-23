@@ -39,9 +39,10 @@ We will only be using some of the pins of our generator:
 5.VCO In – Voltage input for tuning our signal.
 6.Inhibit – Input for enabling our generator.
 
-The frequency of the generator is set using capacitor C1 and resistors R1, R2. When R2 is unconnected, there is a high impedance state at this input, guaranteeing a minimum frequency of 0Hz. According to the datasheet, selecting C1 = 100nF and R1 = 100kΩ provides a central frequency of around 100Hz, which is sufficient for our purposes.
-
+The frequency of the generator is set using capacitor C1 and resistors R1, R2. When R2 is unconnected, there is a high impedance state at this input, guaranteeing a minimum frequency of 0Hz. According to the datasheet, selecting C1 = 100nF and R1 = 100kΩ provides a central 
+frequency of around 100Hz, which is sufficient for our purposes.
 In this configuration, if the voltage at the input is close to 5V, the output frequency will be close to 150Hz, whereas if the voltage drops to 2V, the frequency will decrease to 50Hz. So, there is a clear relationship between the input voltage and the frequency.
+
 Schematic diagram:
 ![426202226_711647120958074_3337822042385526357_n](https://github.com/Wneq1/Random_Number_Generator/assets/127328405/b84b7cca-3c2a-45d0-ac35-8326dd5adaa4)
 
