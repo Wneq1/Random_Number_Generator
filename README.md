@@ -38,3 +38,15 @@ We will only be using some of the pins of our generator:
 4.R2 – Resistor used to select the maximum frequency (fmax).
 5.VCO In – Voltage input for tuning our signal.
 6.Inhibit – Input for enabling our generator.
+
+The frequency of the generator is set using capacitor C1 and resistors R1, R2. When R2 is unconnected, there is a high impedance state at this input, guaranteeing a minimum frequency of 0Hz. According to the datasheet, selecting C1 = 100nF and R1 = 100kΩ provides a central frequency of around 100Hz, which is sufficient for our purposes.
+
+In this configuration, if the voltage at the input is close to 5V, the output frequency will be close to 150Hz, whereas if the voltage drops to 2V, the frequency will decrease to 50Hz. So, there is a clear relationship between the input voltage and the frequency.
+
+The task of the 4026 circuit is to count the clock pulses sent from the CD4046, and counting starts only after the button is pressed. The output frequency from the VCO generator depends on the input voltage, which in turn is closely related to the illumination of the photoresistor and the temperature of the thermistor. Any change in temperature or illumination significantly affects the output frequency. An additional random element is introduced by the button, specifically the moment of change in state on its pins. Another factor increasing randomness is the fact that such buttons exhibit contact bounce, which in this case is desirable.
+
+In summary, this is a simple and interesting project used to display random values on a display, allowing beginners to familiarize themselves with the VCO generator and the method of driving the display. Some photoes of circuit can be find below and the demonstration of my circuit's operation can be found in the link below.
+![426180495_714219967493396_4717998290782984775_n](https://github.com/Wneq1/Random_Number_Generator/assets/127328405/656f9cb4-6196-4e9f-809b-6f797dbae606)
+![426614588_1389782161901406_4753837907063191081_n](https://github.com/Wneq1/Random_Number_Generator/assets/127328405/c2ba6557-d652-445a-961d-631c1bf5d069)
+Wideo demosntration:
+https://www.youtube.com/watch?v=YysNu0e9MAQ
